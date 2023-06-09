@@ -10,17 +10,24 @@ render(<ContactForm />)
 });
 
 test('renders the contact form header', () => {
+//arrange
 render(<ContactForm />);
 
+//act
 const headerElement = screen.queryByText(/Contact Form/i);
 
+//assert
 expect(headerElement).toBeInTheDocument();
 expect(headerElement).toBeTruthy();
 expect(headerElement).toHaveTextContent(/contact form/i)
 });
 
 test('renders ONE error message if user enters less then 5 characters into firstname.', async () => {
+//arrange
+render(<ContactForm />);
 
+//act 
+screen.q
 });
 
 //test('renders THREE error messages if user enters no values into any fields.', async () => {
